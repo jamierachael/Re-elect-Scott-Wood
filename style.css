@@ -1,0 +1,522 @@
+
+/* 
+=================================
+Generic page styles 
+=================================
+*/
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	font-family: 'Verdana', 'Geneva', sans-serif;
+	color: #222;
+}
+
+h1,
+h2,
+
+h4 {
+	font-family: 'Verdana', 'Geneva', sans-serif;
+	font-weight: 500;	
+}
+
+h3 {
+font-family: 'Verdana', 'Geneva', sans-serif;
+    font-weight: bold; 
+    }
+
+h1 {
+	font-size: 30px;
+}
+
+h2 {
+	font-size: 2.4em;
+	font-size: 3vw;
+	animation-duration: .3s;
+    animation-name: fadeAndScale;
+    animation-timing-function: cubic-bezier(.71,.55,.62,1.57);
+}
+
+p {
+	line-height: 1.65em;
+}
+
+/* 
+=================================
+Navigation section 
+=================================
+*/
+nav {
+  width: 100%;
+  height: 60px; 
+  position: fixed; 
+  top: 0;
+  background: #CF0A2C;
+  z-index: 9;
+}
+
+nav ul {
+  padding: 20px;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+nav ul li a {
+  padding: 10px 0;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+nav ul li a:hover {
+  color: #EAEAEA;
+}
+a.active {
+  border-bottom: 2px solid #ecf0f1;
+}
+
+/* 
+=================================
+Hero section 
+=================================
+*/
+
+#hero {
+	width: 100%;
+	height: 800px;
+	overflow: hidden;
+	position: relative;
+	background: url('../assets/splash.jpg') no-repeat center center / cover;
+}
+
+#hero-mobile {
+	display: none;
+	background: url('../assets/splash.jpg') no-repeat center center / cover;
+	height: 320px;
+}
+
+/*
+=================================
+Main section
+=================================
+*/
+
+.main {
+	z-index: 2;
+	background-color: #fff;
+}
+
+.title {
+	background-color: #CF0A2C;
+	padding: 10px 0;
+}
+
+.title h1 {
+	text-align: center;
+	color: #fff;
+	
+	animation-duration: .3s;
+    animation-name: fadeAndScale;
+    animation-timing-function: cubic-bezier(.71,.55,.62,1.57);
+}
+
+@keyframes fadeAndScale {
+    from {
+        opacity: 0;
+        transform: scale(.9, .9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+.text-wrapper {
+	max-width: 920px;
+	margin: 0 auto;
+	padding: 0 40px;
+}
+
+.container {
+	padding: 32px 0;
+}
+
+main .container:nth-of-type(1) {
+	background-color: #f2f2f2;
+}
+
+main .container:nth-of-type(2) {
+	background-color: #EAEAEA;
+}
+
+main .container:nth-of-type(4) {
+	background-color: white;
+}
+
+main .container:nth-of-type(5) {
+	background-color: #f2f2f2;
+}
+
+figure {
+	float: right;
+	width: 36%;
+	margin: 0 0 10px 20px;
+	position: relative;
+}
+
+figure img {
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+figure:hover figcaption {
+	top: 0;
+}
+
+figcaption {
+	font-size: 14px;
+	text-align: center;
+	background-color: #f2f2f2;
+	margin-top: -4px;
+	padding: 5px 0;
+	z-index: 3;
+	position: relative;
+	top: -30px;
+	transition: top .3s ease;
+}
+
+.involve-container {
+	clear: both;
+	padding: 40px 0 0 0;
+	background-color: white;
+}
+
+.involve-title {
+	text-align: center;
+	padding: 10px 0;
+}
+
+#involve {
+	padding-top: 20px;
+	margin: 0 auto;
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	height: 100px;
+}
+
+.supporter-nav-button {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    line-height: 30px;
+    padding: 20px;
+    background-color: #192858;
+    color: #fff;
+    border-bottom: 0;
+    text-decoration: none;
+}
+.supporter-nav-button:nth-child(2) {
+    background-color: #192858;
+    color: #fff
+}
+.supporter-nav-button:nth-child(2):hover {
+    background-color: #b70927
+}
+.supporter-nav-button:nth-child(3) {
+    background-color: #CF0A2C;
+    color: #fff
+}
+.supporter-nav-button:nth-child(3):hover {
+    background-color: #b70927;
+}
+
+label,
+input,
+button,
+select,
+textarea {
+    font-family: 'Verdana', 'Geneva', sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 20px;
+    font-style: italic;
+    color: #444
+}
+
+
+/* Footer section */
+footer {
+	background-color: #CF0A2C;
+	color: #e1dfda;
+	padding: 20px;
+}
+
+footer .container:nth-of-type(1) {
+	padding: 0;
+	position: relative;
+	top: -20px;
+}
+footer .container:nth-of-type(2) {
+	padding: 40px 0;
+}
+
+footer .container:nth-of-type(3) {
+	font-size: 14px;
+	padding-top: 20px;
+}
+
+footer a {
+	color: #CF0A2C;
+	transition: color .3s ease;
+	text-decoration: none;
+}
+
+footer a:hover {
+	color: #e1dfda;
+}
+
+hr {
+	border: 2px solid #292929;
+	box-shadow: 0 1px 0 0 #2f2e2e;
+	max-width: 920px;
+	margin: 0 auto;
+}
+
+blockquote {
+	border: 1px solid #403f3a;
+	border-top: none;
+	padding: 24px 24px 44px 24px;
+	box-shadow: 0 5px 0px rgba(0, 0, 0, 0.08);
+	background-color: #878484;
+	position: relative;
+}
+
+blockquote p {
+	width: 86%;
+	margin: 0 auto;
+}
+
+.quote {
+	position: absolute;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 5em;
+}
+
+.quote-left {
+	top: 30px;
+	left: 15px;
+}
+
+.quote-right {
+	bottom: 65px;
+	right: 15px;
+}
+
+cite {
+	position: absolute;
+	right: 20px;
+	bottom: 10px;
+}
+
+cite:before {
+	content: "- ";
+}
+
+
+/* 
+=================================
+Media queries 
+=================================
+*/
+
+@media only screen and (max-width: 1040px) {
+	.layer {
+		background-size: 1040px;
+	}
+}
+
+@media only screen and (min-width: 1340px) {
+	/* 
+  Fixing the position of .layer-02
+  Leaves the left edge on higher resolutions.
+*/
+	.layer-02 {
+		background-position: bottom left;
+	}
+}
+
+@media all and (max-width: 640px) {
+	/*
+  On smaller screen sizes, we are hiding the
+  module and replacing it with a smaller static
+  image.
+*/
+	#hero {
+		display: none;
+	}
+	#hero-mobile {
+		display: block;
+	}
+	
+	figcaption {
+		font-size: 12px;
+		top: -40px;
+	}
+}
+
+/* Start Added by Jamie */
+
+@media only screen and (max-width: 320px)  {
+	/*
+  On smaller screen sizes, we are hiding the
+  module and replacing it with a smaller static
+  image.
+*/
+	#hero {
+		display: none;
+	}
+	#hero-mobile {
+		display: block;
+	}
+	
+	figcaption {
+		font-size: 12px;
+		top: -40px;
+	}
+} /* End @media small declaration. */
+        
+
+         @media print {
+            body  { background-color: white; }
+            h1    { color: SeaGreen; }
+            p     { font-size: 14pt;
+                     }
+         } /* End @media print declaration. */
+           
+/* Start Added by Jamie */
+      
+
+/* Twitter Fetch */
+/*
+* Example style!
+* You can do whatever the hell you want on your site :-)
+*/
+
+body {
+  font-family:Arial,'Verdana', 'Geneva', sans-serif;
+}
+
+h2 {
+  clear:both;
+}
+
+p, a {
+  font-size:12pt;
+  margin:10px 0 0 0;
+  color:#3d3d3d;
+}
+
+a, a:visited {
+  color:white;
+}
+
+a:hover {
+  color:white;
+}
+
+ul li {
+  list-style:none;
+  overflow:hidden;
+  border:1px solid #dedede;
+  margin:5px;
+  padding:5px;
+}
+
+ul li:hover {
+  background-color:#f0f3fb;
+}
+
+.user, .tweet, .timePosted {
+  float:left;
+}
+
+.user {
+  width:25%;
+}
+
+.tweet {
+  width:50%;
+}
+
+.timePosted {
+  width:15%;
+}
+
+.user {
+  clear:left;
+}
+
+.user a {
+ width: 100px;
+}
+
+.user span span {
+  width:100px;
+  display:block;
+  margin-top:10px;
+}
+
+.user img, .user a > span {
+  float:left;
+}
+
+.interact {
+  float:left;
+  width:10%;
+  margin-top:-7px;
+}
+
+.interact a {
+  margin-left:5px;
+  float:left;
+}
+
+.user a > span {
+  margin-left:10px;
+}
+
+.media img {
+  max-width:250px;
+  max-height:250px;
+}
+
+#linkage {
+  position:fixed;
+  top:0px;
+  right:0px;
+  background-color:#3d3d3d;
+  color:#ffffff;
+  text-decoration:none;
+  padding:5px;
+  width:10%;
+  font-family:arial;
+}
+
+.tco-hidden{
+  display: none;
+}
